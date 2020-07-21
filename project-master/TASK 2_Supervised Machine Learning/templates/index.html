@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html >
+<!--From https://codepen.io/frytyler/pen/EGdtg-->
+<head>
+  <meta charset="UTF-8">
+  <title>Linear Regresion Model</title>
+  <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Arimo' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Hind:300' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
+<link href="/Desk Items/Rohan/Deployment/fonts/css/all.css" rel="stylesheet" type="text/css">
+ <style>
+h1 {text-align: center;}
+p {text-align: center; font-size: 18px;}
+div {text-align: center;font-size: 20px; font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+align-content: center;align-items: center;}
+button{   
+        font-size: 17px;
+        font-weight: 600;
+        color: white;
+        text-transform: uppercase;
+        background: linear-gradient(57deg, #00C6A7 , #1E4D92 ); 
+        border-radius: 4px 4px 4px 4px;
+        padding: 20px 35px ; 
+        }
+        button:hover{
+  background: linear-gradient(57deg, #1E4D92, #00C6A7 );   
+  transform: scale(1.1);
+  transition: all 0.2s linear;
+}
+  
+
+fieldset{
+  width: 600px;
+  margin: auto;
+  
+}
+
+.body-container{
+  width: 50%
+  margin: 50px auto;
+
+}
+
+body{
+  background: linear-gradient(57deg, #00C6A7 , #b7a8ec );
+}
+
+
+</style> 
+</head>
+
+<body>
+<body style="background-color:#E2C9E2;">
+ 
+   <div class="login">
+  <h3><ins>Linear Regession Model</ins></h3>
+  <h1>PREDICT󠀥 🔮 PERCENTAGE</h1>
+  
+
+     <!-- Main Input For Receiving Query to our ML -->
+     <fieldset>
+       <legend>Specify the number of hours that you study daily:</legend>
+      <form action="{{ url_for('predict')}}"method="post">
+        <br>
+      
+      <input type="text" style="padding: 5px;" name="Hours" placeholder="           no. of hours" required="required" pattern="(([0-9]{1})|([1][0-9]{1})|([2][0-3]{1}))([.][0-9]{1,2})?" title="Must be between 0 and 23.99" />
+      <br><br>
+      <button type="submit" class="btn btn-primary btn-block btn-large"> Predict </button><br><br>
+    </form>
+    </fieldset>
+
+   <br>
+   <br>
+   <fieldset>
+     <legend>Prediction:</legend>
+   {{ prediction_text }} <br><br>
+   {{ result }}
+   </fieldset>
+   <br>
+   <br>
+   <p><b>Note:</b>This is just an approximate Prediction based on the <i><b>Linear Regression model.</b></i></p>
+   <emp>🌟Watch <a href="https://youtu.be/NiFN960s_z0">this</a> Video to understand the process of building and deployment of this model🌟</emp>
+   <br><br>
+   
+
+ </div>
+ 
+ <p><b>Download the source code from my <a href = "https://github.com/rohandreamerz/project">GitHub repository.</a> Follow me on<a href = "https://www.linkedin.com/in/rohaankamble/"> LinkedIn.</a></b></p>
+
+<br>
+
+</fieldset>
+<p>🡲 Designed by <b>Rohan Kamble 🡰</b></p>
+</body>
+</html>

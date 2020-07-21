@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+	
+ <meta charset="UTF-8">
+ <title>Linear Regression Model</title>
+ <link rel="stylesheet" type="text/css" href="style.css"/>
+<link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet"/>
+
+</head>
+<body>
+
+<header class="site-header clearfix">
+ <nav>
+  <div class="logo">
+   <h1>Linear Regression Model</h1>
+
+  </div>
+  </nav>
+ <section>
+  <div class="leftside"> 
+   <img src="images/image1.png"><br><br><br><br><br><br>
+   <p>Download the source code from my <a href = "https://github.com/rohandreamerz/project">GitHub.</a> Follow my LinkedIN profile <a href = "https://www.linkedin.com/in/rohaankamble/">here</a></p>
+
+  </div>
+  <div class="rightside"> 
+   <div class="login">
+	<h1>PREDICT󠀥 🔮 PERCENTAGE</h1>
+     <!-- Main Input For Receiving Query to our ML -->
+    <form action="{{ url_for('predict')}}"method="post">
+        <p> Specify the number of hours you study daily</p>
+        <label for="Hours">No. of Hours</label>
+    	<input type="text" name="Hours" placeholder="no. of study hours" required="required"</> <br><br>
+        <button type="submit" class="btn btn-primary btn-block btn-large">Predict Percentage</button>
+        <p> Note: If percentage >100, then it can be rounded down to 100%</p>
+    </form>
+
+   <br>
+   <br>
+   {{ prediction_text }}
+
+ </div>
+  
+  </div>
+  
+ </section>
+
+</header>
+
+
+</body>
+</html>
